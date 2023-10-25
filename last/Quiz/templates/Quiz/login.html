@@ -1,0 +1,16 @@
+{% extends 'Quiz/dependencies.html' %}
+{% load static%}
+{% block content %}
+<div class="container-fluid" style="background-image: url('{% static '4b81af968e56632dc5d155e35f53fb1c.gif' %}'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 100vh;">
+    <div class="container jumbotron">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p><input type="text" name="username" placeholder="user"></p>
+        <p><input type="password" name="password" placeholder="password" ></p>
+        <input class="btn btn-success" type="submit" value="login">
+        <p>нету аккаунта? <a href='{% url 'register' %}'>registration</a></p>
+    </form>
+    </div>
+</div>
+{% endblock %}
+/

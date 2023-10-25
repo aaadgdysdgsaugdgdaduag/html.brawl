@@ -1,0 +1,25 @@
+{% extends 'Quiz/dependencies.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container " style="background-image: url('{% static 'rege.gif' %}'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 100vh;">
+
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+        <div class="card" align="centre " style="width: 32rem; border:5px black solid">
+            <img class="card-img-top" src="https://i.ytimg.com/vi/1GEGnaOibM4/maxresdefault.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">баллов: {{score}}</h5>
+
+                <p class="card-text">в процентах: {{percent}}%</p>
+                <p class="card-text">время : {{time}} секунд</p>
+                <p class="card-text">правильно: {{correct}}</p>
+                <p class="card-text">неправильно: {{wrong}}</p>
+                <p class="card-text">вопросов всего: {{total}}</p>
+                <h5>молодец</h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
